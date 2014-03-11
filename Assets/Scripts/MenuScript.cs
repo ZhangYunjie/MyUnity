@@ -5,9 +5,18 @@
 /// </summary>
 public class MenuScript : MonoBehaviour {
 
+	private GUISkin skin;
+
+	void Start () {
+				// Load a skin for the buttons
+				skin = Resources.Load ("GUISkin") as GUISkin;
+		}
+
 	void OnGUI () {
 				const int buttonWidth = 84;
 				const int buttonHeight = 60;
+
+				GUI.skin = skin;
 
 				// Draw a button to start the game
 				if (
